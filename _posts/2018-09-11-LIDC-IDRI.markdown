@@ -9,7 +9,7 @@ categories: LIDC-IDRI数据集详解
 在接下来的内容里，我会将我对这些文件的解析过程分享出来，在加深我对医疗数据理解的同时，也方便其他人使用这些数据。  
 所有代码都已经上传到[GitHub](https://github.com/wangqiuli0102/LIDC-IDRI-Toolbox-python)项目里。
 
-![](../assets/1.png)  
+![](/assets/1.png)  
 
 
 #### lidc-idri_nodule_counts-6-23-2015    
@@ -22,6 +22,6 @@ categories: LIDC-IDRI数据集详解
 详细的诊断信息，158例  
 #### XML文件
 通过解析XML文件，我们可以获得如下数据结构:  
-![](../assets/2.png)  
+![](/assets/2.png)  
 其中*noduleID*对应着*list3.2.csv*提供的nodIDs，与结节一一对应。*subtlety*等是放射科医生提供的9个标签信息，打分范围是1-6，得分越高，该属性就越明显。*roi*则是结节在图像中的分割边界。  
 以上是LIDC-IDRI数据包含的所有文件以及文件信息，后续会继续说明如何使用这些文件信息，进行数据提取。
