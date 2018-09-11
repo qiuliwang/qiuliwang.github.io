@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "LIDC-IDRI数据集详解（1）数据集结构"
+date:   2018-09-10 20:54:38 +0800
+categories: LIDC-IDRI数据集详解
+---
+
+LIDC-IDRI数据集，是由美国国家癌症研究所(National Cancer Institute)发起收集的
+![](assets/4.jpg)  
