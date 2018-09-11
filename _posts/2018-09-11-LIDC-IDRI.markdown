@@ -5,5 +5,23 @@ date:   2018-09-10 20:54:38 +0800
 categories: LIDC-IDRI数据集详解
 ---
 
-LIDC-IDRI数据集，是由美国国家癌症研究所(National Cancer Institute)发起收集的
-![](assets/4.jpg)  
+[LIDC-IDRI](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)数据集，是由美国国家癌症研究所(National Cancer Institute)发起收集的。数据大约有124GB，包含1010例病例，大部分病例都包含CT扫描影像若干，每一组CT扫描影像可以称为scan，每个scan包含若干slice。有四位放射科医生对这些病例进行了诊断，诊断信息保存在了与CT扫描对应的xml文件中。数据集包含若干文件，每一份文件都提供了相应的标签信息。  
+在接下来的内容里，我会将我对这些文件的解析过程分享出来，在加深我对医疗数据理解的同时，也方便其他人使用这些数据。  
+所有代码都已经上传到[GitHub](https://github.com/wangqiuli0102/LIDC-IDRI-Toolbox-python)项目里。
+
+![](../assets/1.png)  
+
+
+#### lidc-idri_nodule_counts-6-23-2015    
+统计了每一个*scan*中包含的肺结节个数，并以3毫米为界，统计了大于3毫米以及小于3毫米的结节的个数。  
+#### LIDC-IDRI_MetaData   
+该数据集的基本信息，包含了每一个病例的ID以及每一个扫描的*Series UID*。在数据集中，扫描数据包含CT、DT等，在一般肺结节学习任务中，我们一般使用CT数据。通过该文件，我们可以在数据集中寻找出每一个病例所对应的CT扫描影像。
+#### list3.2   
+包含每一个结节的基本信息：结节所在的扫描层数，X坐标Y坐标，结节的直径。每个结节还会包含0到4个*nodIDs*，这些nodID对应xml文件，每一个*nodIDs*都对应着一个放射科医生的诊断信息。也就是说，每一个结节最多可能获得4份标签信息。
+#### tcia-diagnosis-data-2012-04-20
+详细的诊断信息，158例  
+#### XML文件
+通过解析XML文件，我们可以获得如下数据结构:  
+![](../assets/2.png)  
+其中*noduleID*对应着*list3.2.csv*提供的nodIDs，与结节一一对应。*subtlety*等是放射科医生提供的9个标签信息，打分范围是1-6，得分越高，该属性就越明显。*roi*则是结节在图像中的分割边界。  
+以上是LIDC-IDRI数据包含的所有文件以及文件信息，后续会继续说明如何使用这些文件信息，进行数据提取。
