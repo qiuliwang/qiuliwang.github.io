@@ -27,7 +27,7 @@ pydicom是一个可以用来解析Dicom文件的包，python可以调用，在�
 > scipy.misc.imsave('000001.jpeg', pixarray)
 
 这样我们就获得了图像`000001.jpeg`，`pixel_array`会被保存成灰度图：  
-![](assets/000001.jpeg)  
+![]({{ "/assets/000001.jpeg" | absolute_url }})  
 
 `pixel_array`中保存的是hu值，是测定人体某一局部组织或器官密度大小的一种计量单位。  
 当我们有一个scan，包含很多slice的时候，我们就需要对slice进行一个排序，这样他们就会按照拍摄的顺序排好，能够正确显示人体组织形态：
