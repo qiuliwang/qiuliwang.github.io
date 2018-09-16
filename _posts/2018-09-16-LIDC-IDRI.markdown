@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "LIDC-IDRI数据集详解（2）Dicom文件解析"
+date:   2018-09-16 20:54:38 +0800
+categories: LIDC-IDRI数据集详解
+---
+
+### Dicom
+DICOM（Digital Imaging and Communications in Medicine）即医学数字成像和通信，是医学图像和相关信息的国际标准（ISO 12052）。它定义了质量能满足临床需要的可用于数据交换的医学图像格式。（百度百科）  
+LIDC-IDRI数据集内，肺部CT影像均为Dicom格式。Dicom文件即可以说是图像文件，又可以说不是图像文件。它和普通图像不一样的是，它通常会包含大量的除了图片以外的信息，比如拍摄CT的设备，病人的基础信息等等，同时会包含相应的影像图像。这个影像图像又和普通图像有所区别，一般的影像图像通常是三通道RGB图像，而Dicom中影像信息只有一个通道，且像素点的值范围通常在-1000到+2000之间。  
+### pydicom
+pydicom是一个可以用来解析Dicom文件的包，python可以调用，在用pip安装之后，在代码开头写上`import pydicom`就可以。  
+> import pydicom  
+> sliceone = pydicom.dcmread('000001.dcm')  
+> \#读取一张dicom文件    
+
+如果直接打出这个sliceone，我们会得到很多东西，但是我们只需要获取必要的信息就行，比如 `SliceThickness`和`PixelSpacing`两个属性，他们分别表示每一层扫描的厚度和像素点之间表示的实际距离。这两个属性可以通过这样的方式获取：   
+> SliceThickness = sliceone.data_element('SliceThickness')  
+> PixelSpacing = sliceone.data_element('PixelSpacing')  
+> print(SliceThickness.value)  
+> print(PixelSpacing.value)  
+
+这样就可以把两个属性的值获取到。下面我们看一下怎么获取图像信息。  
+我们看出，如果直接打印或者保存dicom文件是得不到影像信息的，因为它们都被当作文件的一个属性保存在`pixel_array`中。我们只需要获得`pixel_array`，然后再用`scipy`保存就可以了。  
+> import scipy.misc
+> pixarray = sliceone.pixel_array  
+> scipy.misc.imsave('000001.jpeg', pixarray)
+
+这样我们就获得了图像`000001.jpeg`，`pixel_array`会被保存成灰度图：  
+![](assets/000001.jpeg)  
+
+`pixel_array`中保存的是hu值，是测定人体某一局部组织或器官密度大小的一种计量单位。  
+当我们有一个scan，包含很多slice的时候，我们就需要对slice进行一个排序，这样他们就会按照拍摄的顺序排好，能够正确显示人体组织形态：
+> slices = [pydicom.dcmread(s) for s in filelist]
+> slices.sort(key = lambda x : float(x.ImagePositionPatient[2]),reverse=True)  
+
+`filelist`中是某一个scan中所有的slice，可以通过如上方式对slices进行排序。这一顿操作之后，你就可以将一个scan中的所有slice，按照顺序保存在了`slices`中。
+
+
+
