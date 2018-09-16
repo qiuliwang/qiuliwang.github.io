@@ -9,8 +9,7 @@ categories: LIDC-IDRI数据集详解
 在接下来的内容里，我会将我对这些文件的解析过程分享出来，在加深我对医疗数据理解的同时，也方便其他人使用这些数据。  
 所有代码都已经上传到[GitHub](https://github.com/wangqiuli0102/LIDC-IDRI-Toolbox-python)项目里。
 
-![](/assets/1.png)  
-
+![]({{ "/assets/1.png" | absolute_url }})  
 
 #### lidc-idri_nodule_counts-6-23-2015    
 统计了每一个*scan*中包含的肺结节个数，并以3毫米为界，统计了大于3毫米以及小于3毫米的结节的个数。  
