@@ -26,7 +26,7 @@ list3.2.csv
 这个部分是比较麻烦的地方，因为我们需要去解析对应的xml文件。从`list3.2.csv`中，我们可以找到每一个结节对应的nodIDs，随后我们就需要根据这个nodIDs和Patient Id，找到对应xml文件中对应的标签，读取信息。在每一个病人的xml文件中，nodIDs都是唯一的，所以不需要担心找错结节。xml解析后我们可以得到如下信息：  
 >noduleID  
 >         characteristics  
->            <subtlety>5</subtlety>  
+>            \<subtlety\>5\</subtlety\>  
 >            <internalStructure>1</internalStructure>  
 >            <calcification>6</calcification>  
 >            <sphericity>3</sphericity>  
