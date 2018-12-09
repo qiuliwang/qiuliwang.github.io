@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "创建软连接"
+date:   2018-12-09 20:54:38 +0800
+categories: Linux
+---
+> ln -s /A /B
+ 
+创建好了之后，会在当前目录下生成B，*cd B*就可以进入A

@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "ssh免密登陆"
+date:   2018-12-09 20:54:38 +0800
+categories: Linux
+---
+主机A要登陆主机B，一般需要密码。只要配置一下ssh密钥，就可以免密码登陆，scp也可以免密码传送文件了。
+> 1.在主机A生产密钥对: ssh-keygen -t rsa， 会在.ssh目录下产生密钥文件  
+> 2.拷贝主机A的公钥到主机B: scp id_rsa.pub  
+> 3.将主机A的公钥加到主机B的授权列表.ssh/authorized_keys（若不存在，手动创建）: cat id_rsa.pub >> authorized_keys    
+> 4.授权列表authorized_keys的权限必须是600，chmod 600 authorized_keys  
+
