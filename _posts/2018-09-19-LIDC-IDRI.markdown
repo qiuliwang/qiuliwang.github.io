@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "LIDC-IDRI数据集详解（3）获取结节信息"
+date:   2018-09-18 10:04:38 +0800
+categories: LIDC-IDRI数据集详解
+---
+
+LIDC-IDRI的dicom数据以及xml文件都放在了DOI文件夹内，另外还提供了一下几个文件： tcia-diagnosis-data-2012-04-20.xls  
+lidc-idri_nodule_counts-6-23-2015.xlsx  
+LIDC-IDRI_MetaData.csv  
+list3.2.csv  
+接下来我们通过以上文件，来获取LIDC中，被放射科医生打过标签的结节。  
+### 找到每个patient对应的Dicom文件
+在这里，我们需要用到`LIDC-IDRI_MetaData.csv`，在这个文件里面，可以找到每一个病例对应的scans。需要注意的是，一个病人不是只有一个scan，很多病人都有CT、DT两个文件夹，在这里，我们需要找到CT所对应的文件夹即可。这个操作也非常简单，遍历`Patient Id`，查找每一个`Patient Id`的`Modality`是否为CT，如果是CT，保存对应的`Series UID`就可以了。我们可以把这个中间结果保存成`id_series.txt`，方便以后使用，文件内容如下：  
+>LIDC-IDRI-0779,1.3.6.1.4.1.14519.5.2.1.6279.6001.771741891125176943862272696845  
+>LIDC-IDRI-0466,1.3.6.1.4.1.14519.5.2.1.6279.6001.275007193025729362844652516689  
+>LIDC-IDRI-0501,1.3.6.1.4.1.14519.5.2.1.6279.6001.900182736599353600185270496549  
+>......  
+
+根据这个文件的内容，我们就可以在DOI文件夹下进行搜索，找到所有病人对应的CT的`Series UID`，然后用上各部分提到的代码，读取内容，保存为一个list就可以了。需要注意的是，每一个scan都会有一个xml文件，读取的时候不要混入dicom中，这个scan如何使用，我们后面再看。
+
+### 从scan中找到结节  
+这个时候我们就需要用到另一个文件`list3.2.csv`，这里面包含了所有被放射科医生打过标签的结节信息。`case`是和`Patient Id`对应的，比如`LIDC-IDRI-0779`就对应`case`的0779，`eq.diam`表示结节的直径，结节在scan中的位置由`x loc`，`y loc`，`slice no`来指示。每一个`nodIDs`对应一个医生的打的标签。每个结节有0-4个`nodIDs`，这也就意味着，每个结节都可能有0到4位医生打过标签。此时，我们只需要根据`x loc`，`y loc`，`slice no`，找到对应位置，抠出相应大小的信息就可以。  
+
+### 提取医生打的标注
+这个部分是比较麻烦的地方，因为我们需要去解析对应的xml文件。从`list3.2.csv`中，我们可以找到每一个结节对应的`nodIDs`，随后我们就需要根据这个`nodIDs`和`Patient Id`，找到对应xml文件中对应的标签，读取信息。在每一个病人的xml文件中，`nodIDs`都是唯一的，所以不需要担心找错结节。xml解析后我们可以得到如下信息：  
+>noduleID  
+>   characteristics  
+>       &lt;subtlety&gt;5&lt;/subtlety&gt;  
+>       &lt;internalStructure&gt;1&lt;/internalStructure&gt;  
+>       &lt;calcification&gt;6&lt;/calcification&gt;  
+>       &lt;sphericity&gt;3&lt;/sphericity&gt;  
+>       &lt;margin&gt;3&lt;/margin&gt;  
+>       &lt;lobulation&gt;3&lt;/lobulation&gt;  
+>       &lt;spiculation&gt;4&lt;/spiculation&gt;  
+>       &lt;texture&gt;5&lt;/texture&gt;  
+>       &lt;malignancy&gt;5&lt;/malignancy&gt;  
+
+根据`nodIDs`找到xml中的`noduleID`，依次读取接下来的标签就可以。我们可以看出，LIDC提供了9个标签。除了`calcification`打分是1-6，其余8个标签打分都是1-5，分数越高，这个属性就越明显。将这些信息和对应的结节结合起来，就可以做肺结节的分类问题了。  
+这部分代码保存在了[LIDC-IDRI-Toolbox-python](https://github.com/wangqiuli0102/LIDC-IDRI-Toolbox-python)中，虽然有点乱，但是可以用。得到的一些中间信息都已经保存了，感兴趣的可以试一下。
