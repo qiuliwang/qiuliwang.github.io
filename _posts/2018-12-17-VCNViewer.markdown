@@ -7,7 +7,7 @@ categories: Linux
 
 vncviewer配置的一些问题已经有很多人说过了，总的来说没有太大困难。  
 但是我碰到了一个很有意思的问题，就是怎么修改远程桌面的分辨率。我的xstartup文件配置如下：  
-'''
+```
 #!/bin/sh
 
 # Uncomment the following two lines for normal desktop:
@@ -36,10 +36,12 @@ gnome-panel &
 gnome-settings-daemon &
 metacity &
 nautilus &
-'''
+```
 但是桌面看起来很小，跟我的显示器明显不配。  
-![]({{'/assets/3.jpeg'| absolute_url }})  
+![]({{'/assets/5.png'| absolute_url }})  
 无论怎么修改xstartup都没有用，搜了很多方法，发现了一个很简单的方法：  
 在启动vncserverd的时候，设置参数就行：  
->> vncserver -geometry 1980x1020:5  
-1980x1020是分辨率，5是指定的端口号。当然，在执行之前需要先关掉现在的端口* vncserver -kill :5*
+>> vncserver -geometry 1980x1020:5   
+
+1980x1020是分辨率，5是指定的端口号。当然，在执行之前需要先关掉现在的端口* vncserver -kill :5* 。最后的结果就是如下图所示：  
+![]({{'/assets/6.jpeg'| absolute_url }})  
