@@ -43,5 +43,5 @@ nautilus &
 在启动vncserverd的时候，设置参数就行：  
 >> vncserver -geometry 1980x1020:5   
 
-1980x1020是分辨率，5是指定的端口号。当然，在执行之前需要先关掉现在的端口* vncserver -kill :5* 。最后的结果就是如下图所示：  
+1980x1020是分辨率，5是指定的端口号。当然，在执行之前需要先关掉现在的端口*vncserver -kill :5* 。最后的结果就是如下图所示：  
 ![]({{'/assets/6.jpeg'| absolute_url }})  
