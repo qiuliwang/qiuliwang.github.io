@@ -445,14 +445,9 @@ main > section:first-of-type h2 {
   border-top: 0;
 }
 
-section[id],
-footer[id] {
+section[id] {
   scroll-margin-top: 58px;
 }
-.prose strong {
-  font-weight: 700;
-}
-
 .prose strong.me,
 strong.me {
   font-weight: 700;
@@ -532,13 +527,6 @@ sup.corr {
   font-weight: 700;
   line-height: 0;
 }
-
-.note {
-  margin: 18px 0 0;
-  font-size: 12.8px;
-  color: var(--muted);
-}
-
 /* ---------- 项目 / 经历 ---------- */
 /* 复用论文条目的 .pub，保证全页只有一种列表节奏 */
 
@@ -568,38 +556,6 @@ sup.corr {
 .line .mid {
   color: var(--muted);
 }
-
-.plain {
-  margin: 0;
-  padding-left: 18px;
-  font-size: 15.6px;
-}
-
-.plain li {
-  margin-bottom: 6px;
-}
-
-/* ---------- 页脚 ---------- */
-
-footer {
-  margin-top: 76px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  font-size: 14.2px;
-  color: var(--muted);
-  line-height: 1.9;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer .copy {
-  margin-top: 4px;
-  font-size: 12.8px;
-  opacity: 0.8;
-}
-
 /* ---------- 响应式 ---------- */
 
 /* 窄屏时地图保持最小宽度，横向滑动查看，避免缩成看不清 */
@@ -659,11 +615,6 @@ footer .copy {
   h2 {
     margin-top: 46px;
     font-size: 21px;
-  }
-
-  .year-block {
-    grid-template-columns: 40px minmax(0, 1fr);
-    column-gap: 10px;
   }
 }
 

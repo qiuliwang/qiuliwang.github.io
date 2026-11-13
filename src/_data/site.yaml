@@ -14,20 +14,16 @@ interests:
   - 可控医学图像合成与虚拟染色
   - 医学视觉语言模型与报告质量
 
-# 页头外链（一行排开，用 / 分隔；icon 字段目前不用，保留备用）
+# 页头外链（一行排开，用 / 分隔）
 links:
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=GdH2U_sAAAAJ&hl=zh-CN
-    icon: scholar
   - label: GitHub
     url: https://github.com/qiuliwang
-    icon: github
   - label: DBLP
     url: https://dblp.org/pid/55/7780-1.html
-    icon: dblp
   - label: ORCID
     url: https://orcid.org/0000-0001-8639-5186
-    icon: orcid
 
 # 页面 <title> 与搜索引擎描述
 title: 王秋里 · Qiuli Wang

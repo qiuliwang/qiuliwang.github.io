@@ -25,10 +25,6 @@ export default function (eleventyConfig) {
       .replace(/王秋里/g, `<strong class="me">王秋里</strong>${star}`);
   });
 
-  // *斜体* → <em>（模板里配合 | safe）
-  eleventyConfig.addFilter("em", (str) =>
-    String(str || "").replace(/\*([^*]+)\*/g, "<em>$1</em>")
-  );
 
   // 站外链接加 target=_blank，mailto 不加
   eleventyConfig.addFilter("target", (url) =>

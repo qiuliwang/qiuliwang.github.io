@@ -118,17 +118,6 @@
         {%- endfor %}
       </ol>
     </section>
-
-    {%- if service and service.length %}
-    <section id="service">
-      <h2>学术服务</h2>
-      <ul class="plain">
-        {%- for s in service %}
-        <li>{{ s.text | em | safe }}</li>
-        {%- endfor %}
-      </ul>
-    </section>
-    {%- endif %}
   </main>
 
   <script src="/assets/js/main.js?v={{ build }}"></script>

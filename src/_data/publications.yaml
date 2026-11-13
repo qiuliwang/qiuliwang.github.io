@@ -1,9 +1,9 @@
 # ——— 论文列表 ———
-# 一篇一条，页面按年份倒序、同一年分在一组，格式完全一致，不分区、不标作者位次、不挂 CCF 与 DOI。
-# 字段：title / authors / venue / year / type(journal|conference|preprint|chinese) / corresponding
-# · 作者里写 Qiuli Wang 或 王秋里，页面会自动加粗
-# · corresponding: true → 在本人名字后加 *（页面底部有"* 通讯作者"脚注）
-# · 想挂链接时可加 pdf: '...' 或 code: '...'（显示成小链接）
+# 一篇一条，页面按年份倒序排列。
+# 字段：title / authors / venue / year / map / corresponding
+# · 作者里写 Qiuli Wang 或 王秋里，页面会自动加粗；corresponding: true 时名字后加 *
+# · map：决定这篇论文出现在研究地图哪些节点的筛选结果里（可用标签见 README）
+# · 可选 pdf: '...' / code: '...'，会在刊名后生成链接
 
 - title: 'Realistic Lung Nodule Synthesis with Multi-Target Co-Guided Adversarial Mechanism'
   authors: 'Qiuli Wang, Xiaohong Zhang, Wei Zhang, Mingchen Gao, Sheng Huang, Jian Wang, Jiuquan Zhang, Dan Yang, Chen Liu'
