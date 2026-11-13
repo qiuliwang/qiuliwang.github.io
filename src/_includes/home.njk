@@ -98,8 +98,11 @@
 
     <section id="map">
       <h2>研究地图</h2>
-      <div class="rmap-wrap">{% include "research-map.svg" %}</div>
-      <div class="map-tip" id="map-tip">点一下试试</div>
+      <div class="map-widget">
+        <div class="rmap-wrap">{% include "research-map.svg" %}</div>
+        {% include "research-map-chips.html" %}
+        <div class="map-tip" id="map-tip">点一下试试</div>
+      </div>
     </section>
     <section id="papers">
       <h2>论文</h2>

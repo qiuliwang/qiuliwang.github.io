@@ -18,10 +18,12 @@
 
   /* ---------- 研究地图 ---------- */
   var mapSvg = document.querySelector(".rmap");
-  if (mapSvg) {
+  var mapWidget = document.querySelector(".map-widget");
+  if (mapSvg && mapWidget) {
     var mapNodes = [].slice.call(mapSvg.querySelectorAll(".node[data-f]"));
     var mapEdges = [].slice.call(mapSvg.querySelectorAll(".edge"));
     var pubItems = [].slice.call(document.querySelectorAll("#papers .pub"));
+    var chips = [].slice.call(mapWidget.querySelectorAll(".map-chip"));
     var bar = document.getElementById("filter-bar");
     var nameEl = document.getElementById("filter-name");
     var countEl = document.getElementById("filter-count");
@@ -131,6 +133,9 @@
         if (ok) shown++;
       });
       paint(id);
+      chips.forEach(function (c) {
+        c.classList.toggle("is-active", c.getAttribute("data-f") === id);
+      });
       if (!bar) return;
       bar.classList.toggle("is-on", !!id);
       if (id && nameEl) {
@@ -198,12 +203,12 @@
       return ev.target.closest ? ev.target.closest("[data-f]") : null;
     };
 
-    mapSvg.addEventListener("mouseenter", function (ev) {
+    mapWidget.addEventListener("mouseenter", function (ev) {
       lastPoint = { x: ev.clientX, y: ev.clientY };
       armTip(hitOf(ev), ev.clientX, ev.clientY);
     });
 
-    mapSvg.addEventListener("mousemove", function (ev) {
+    mapWidget.addEventListener("mousemove", function (ev) {
       var target = hitOf(ev);
       var id = target ? target.getAttribute("data-f") : null;
 
@@ -225,7 +230,7 @@
       armTip(target, ev.clientX, ev.clientY);
     });
 
-    mapSvg.addEventListener("mouseleave", function () {
+    mapWidget.addEventListener("mouseleave", function () {
       clearTimeout(tipTimer);
       hideTip();
       hovered = null;
@@ -241,12 +246,12 @@
       if (next) scrollToPapers();
     };
 
-    mapSvg.addEventListener("click", function (ev) {
+    mapWidget.addEventListener("click", function (ev) {
       var target = hitOf(ev);
       if (target) toggle(target);
     });
 
-    mapSvg.addEventListener("keydown", function (ev) {
+    mapWidget.addEventListener("keydown", function (ev) {
       if (ev.key !== "Enter" && ev.key !== " ") return;
       var target = hitOf(ev);
       if (!target) return;
@@ -264,7 +269,7 @@
     document.addEventListener("click", function (ev) {
       if (!active) return;
       var t = ev.target;
-      if (t.closest && (t.closest(".rmap") || t.closest("#filter-bar"))) return;
+      if (t.closest && (t.closest(".map-widget") || t.closest("#filter-bar"))) return;
       applyFilter(null);
     });
   }
