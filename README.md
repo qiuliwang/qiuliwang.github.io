@@ -52,7 +52,6 @@ src/
   authors: 'Qiuli Wang, A, B'
   venue: 'IEEE Transactions on Medical Imaging (TMI)'
   year: 2027
-  type: journal                    # journal | conference | preprint | chinese
   map: [ct, unc, lung]             # 决定它出现在地图哪些节点的筛选结果里
   corresponding: true              # 本人名字后加 *
 ```
