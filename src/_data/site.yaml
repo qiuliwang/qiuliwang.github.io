@@ -1,0 +1,34 @@
+# ——— 站点与个人信息（改这里就能改页头） ———
+name_zh: 王秋里
+name_en: Qiuli Wang
+role: 预聘副研究员
+affiliation: 陆军军医大学第一附属医院（西南医院）放射科
+location: 重庆，中国
+email: qiuliwang0102@outlook.com
+avatar: /assets/img/avatar.jpg
+
+# 研究方向（显示在页头邮箱下方，顿号连接）
+interests:
+  - 不确定性建模与多标注学习
+  - 模态缺失与跨模态表征
+  - 可控医学图像合成与虚拟染色
+  - 医学视觉语言模型与报告质量
+
+# 页头外链（一行排开，用 / 分隔；icon 字段目前不用，保留备用）
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=GdH2U_sAAAAJ&hl=zh-CN
+    icon: scholar
+  - label: GitHub
+    url: https://github.com/qiuliwang
+    icon: github
+  - label: DBLP
+    url: https://dblp.org/pid/55/7780-1.html
+    icon: dblp
+  - label: ORCID
+    url: https://orcid.org/0000-0001-8639-5186
+    icon: orcid
+
+# 页面 <title> 与搜索引擎描述
+title: 王秋里 · Qiuli Wang
+description: 王秋里，陆军军医大学第一附属医院（西南医院）放射科预聘副研究员，研究方向为医学影像计算、不确定性建模、可控医学图像合成与医学视觉语言模型。

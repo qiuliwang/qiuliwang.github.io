@@ -1,0 +1,20 @@
+京华老宋体 / KingHwa Old Song
+================================
+
+作者：TerryWang（王廷瑞）
+出处：https://zhuanlan.zhihu.com/p/1915922891633043436
+分发页：https://fonts.zeoseven.com/items/309/
+
+本目录下的 .woff2 切片来自 ZeoSeven Fonts 的字体 API
+（https://fontsapi.zeoseven.com/309/main/result.css），为原始文件的
+未经修改的镜像，仅包含本页面用到的字所在的切片，用于消除对第三方
+CDN 的运行时依赖。
+
+授权要点（版权方自定义条款，非标准开源协议）：
+
+- 商业使用：允许
+- 网页嵌入 / 软件集成：允许
+- 非盈利再分发：允许（须保留版权声明与许可协议副本，即本文件）
+- 修改与衍生：**禁止**（因此未做任何子集化或格式转换）
+
+字体版权归 TerryWang 所有，使用时请遵守上述条款。

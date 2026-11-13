@@ -1,0 +1,65 @@
+<svg class="rmap" viewBox="0 0 700 470" role="img" aria-label="研究地图：数据模态、方法与应用场景的对应关系">
+  <g class="rmap-heads">
+    <text class="head" x="112" y="24" text-anchor="middle">模态</text>
+    <text class="head" x="344" y="24" text-anchor="middle">方法</text>
+    <text class="head" x="566" y="24" text-anchor="middle">应用场景</text>
+  </g>
+  <g class="rmap-hits">
+    <rect class="hit" data-f="ct" x="36" y="33.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="mri" x="36" y="121.5" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="wsi" x="36" y="210.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="report" x="36" y="298.5" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="natural" x="36" y="387.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="unc" x="268" y="33.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="cm" x="268" y="103.80000000000001" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="syn" x="268" y="174.6" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="lw" x="268" y="245.39999999999998" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="msf" x="268" y="316.2" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="vlm" x="268" y="387.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="lung" x="490" y="33.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="liver" x="490" y="151.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="brain" x="490" y="269.0" width="152" height="38" rx="8"/>
+    <rect class="hit" data-f="general" x="490" y="387.0" width="152" height="38" rx="8"/>
+  </g>
+  <g class="rmap-edges">
+    <path class="edge" data-a="ct" data-b="unc" stroke="#b45a3c" d="M158,52.0 C228,52.0 228,52.0 285,52.0"/>
+    <path class="edge" data-a="ct" data-b="syn" stroke="#a34e6b" d="M158,52.0 C235,52.0 235,193.6 298,193.6"/>
+    <path class="edge" data-a="ct" data-b="cm" stroke="#bf8433" d="M158,52.0 C231,52.0 231,122.80000000000001 291,122.80000000000001"/>
+    <path class="edge" data-a="mri" data-b="cm" stroke="#bf8433" d="M175,140.5 C239,140.5 239,122.80000000000001 291,122.80000000000001"/>
+    <path class="edge" data-a="mri" data-b="syn" stroke="#a34e6b" d="M175,140.5 C243,140.5 243,193.6 298,193.6"/>
+    <path class="edge" data-a="wsi" data-b="syn" stroke="#a34e6b" d="M157,229.0 C235,229.0 235,193.6 298,193.6"/>
+    <path class="edge" data-a="wsi" data-b="lw" stroke="#6d8a42" d="M157,229.0 C232,229.0 232,264.4 293,264.4"/>
+    <path class="edge" data-a="report" data-b="vlm" stroke="#7a5aa0" d="M154,317.5 C227,317.5 227,406.0 288,406.0"/>
+    <path class="edge" data-a="natural" data-b="syn" stroke="#a34e6b" d="M157,406.0 C235,406.0 235,193.6 298,193.6"/>
+    <path class="edge" data-a="natural" data-b="lw" stroke="#6d8a42" d="M157,406.0 C232,406.0 232,264.4 293,264.4"/>
+    <path class="edge" data-a="natural" data-b="msf" stroke="#b5763a" d="M157,406.0 C232,406.0 232,335.2 292,335.2"/>
+    <path class="edge" data-a="unc" data-b="lung" stroke="#b45a3c" d="M403,52.0 C475,52.0 475,52.0 534,52.0"/>
+    <path class="edge" data-a="syn" data-b="lung" stroke="#a34e6b" d="M390,193.6 C469,193.6 469,52.0 534,52.0"/>
+    <path class="edge" data-a="syn" data-b="liver" stroke="#a34e6b" d="M390,193.6 C471,193.6 471,170.0 538,170.0"/>
+    <path class="edge" data-a="syn" data-b="general" stroke="#a34e6b" d="M390,193.6 C453,193.6 453,406.0 505,406.0"/>
+    <path class="edge" data-a="cm" data-b="lung" stroke="#bf8433" d="M397,122.80000000000001 C473,122.80000000000001 473,52.0 534,52.0"/>
+    <path class="edge" data-a="cm" data-b="liver" stroke="#bf8433" d="M397,122.80000000000001 C474,122.80000000000001 474,170.0 538,170.0"/>
+    <path class="edge" data-a="cm" data-b="brain" stroke="#bf8433" d="M397,122.80000000000001 C471,122.80000000000001 471,288.0 531,288.0"/>
+    <path class="edge" data-a="vlm" data-b="liver" stroke="#7a5aa0" d="M400,406.0 C476,406.0 476,170.0 538,170.0"/>
+    <path class="edge" data-a="vlm" data-b="lung" stroke="#7a5aa0" d="M400,406.0 C474,406.0 474,52.0 534,52.0"/>
+    <path class="edge" data-a="lw" data-b="general" stroke="#6d8a42" d="M395,264.4 C455,264.4 455,406.0 505,406.0"/>
+    <path class="edge" data-a="msf" data-b="general" stroke="#b5763a" d="M396,335.2 C456,335.2 456,406.0 505,406.0"/>
+  </g>
+  <g class="rmap-nodes">
+    <text class="node data" data-f="ct" data-label="CT 影像" tabindex="0" x="112" y="58.0" text-anchor="middle" style="font-size:18.1px" fill="#2f6b8f">CT 影像</text>
+    <text class="node data" data-f="mri" data-label="MRI（多序列）" tabindex="0" x="112" y="146.5" text-anchor="middle" style="font-size:15.1px" fill="#2f8085">MRI（多序列）</text>
+    <text class="node data" data-f="wsi" data-label="病理 WSI" tabindex="0" x="112" y="235.0" text-anchor="middle" style="font-size:15.1px" fill="#4c6fa5">病理 WSI</text>
+    <text class="node data" data-f="report" data-label="影像报告" tabindex="0" x="112" y="323.5" text-anchor="middle" style="font-size:14.5px" fill="#5b7fa8">影像报告</text>
+    <text class="node data" data-f="natural" data-label="自然图像" tabindex="0" x="112" y="412.0" text-anchor="middle" style="font-size:16.0px" fill="#4f7f95">自然图像</text>
+    <text class="node method" data-f="unc" data-label="不确定性建模" tabindex="0" x="344" y="58.0" text-anchor="middle" style="font-size:15.4px" fill="#b45a3c">不确定性建模</text>
+    <text class="node method" data-f="cm" data-label="跨模态表征" tabindex="0" x="344" y="128.8" text-anchor="middle" style="font-size:16.0px" fill="#bf8433">跨模态表征</text>
+    <text class="node method" data-f="syn" data-label="可控合成" tabindex="0" x="344" y="199.6" text-anchor="middle" style="font-size:16.3px" fill="#a34e6b">可控合成</text>
+    <text class="node method" data-f="lw" data-label="频域轻量化" tabindex="0" x="344" y="270.4" text-anchor="middle" style="font-size:15.1px" fill="#6d8a42">频域轻量化</text>
+    <text class="node method" data-f="msf" data-label="多尺度融合" tabindex="0" x="344" y="341.2" text-anchor="middle" style="font-size:15.4px" fill="#b5763a">多尺度融合</text>
+    <text class="node method" data-f="vlm" data-label="视觉语言模型" tabindex="0" x="344" y="412.0" text-anchor="middle" style="font-size:14.5px" fill="#7a5aa0">视觉语言模型</text>
+    <text class="node issue" data-f="lung" data-label="肺癌" tabindex="0" x="566" y="58.0" text-anchor="middle" style="font-size:18.6px" fill="#3d7a55">肺癌</text>
+    <text class="node issue" data-f="liver" data-label="肝癌" tabindex="0" x="566" y="176.0" text-anchor="middle" style="font-size:15.1px" fill="#8a6134">肝癌</text>
+    <text class="node issue" data-f="brain" data-label="脑肿瘤" tabindex="0" x="566" y="294.0" text-anchor="middle" style="font-size:14.5px" fill="#5b6f95">脑肿瘤</text>
+    <text class="node issue" data-f="general" data-label="通用视觉任务" tabindex="0" x="566" y="412.0" text-anchor="middle" style="font-size:16.0px" fill="#6d8a5a">通用视觉任务</text>
+  </g>
+</svg>

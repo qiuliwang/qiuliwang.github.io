@@ -1,0 +1,195 @@
+# ——— 论文列表 ———
+# 一篇一条，页面按年份倒序、同一年分在一组，格式完全一致，不分区、不标作者位次、不挂 CCF 与 DOI。
+# 字段：title / authors / venue / year / type(journal|conference|preprint|chinese) / corresponding
+# · 作者里写 Qiuli Wang 或 王秋里，页面会自动加粗
+# · corresponding: true → 在本人名字后加 *（页面底部有"* 通讯作者"脚注）
+# · 想挂链接时可加 pdf: '...' 或 code: '...'（显示成小链接）
+
+- title: 'Realistic Lung Nodule Synthesis with Multi-Target Co-Guided Adversarial Mechanism'
+  authors: 'Qiuli Wang, Xiaohong Zhang, Wei Zhang, Mingchen Gao, Sheng Huang, Jian Wang, Jiuquan Zhang, Dan Yang, Chen Liu'
+  venue: 'IEEE Transactions on Medical Imaging (TMI)'
+  year: 2021
+  type: journal
+  map: [ct, syn, lung]
+
+- title: 'Lung Nodule Segmentation and Uncertain Region Prediction with an Uncertainty-Aware Attention Mechanism'
+  authors: 'Han Yang, Qiuli Wang, Yue Zhang, Zhulin An, Liu Chen, Xiaohong Zhang, S. Kevin Zhou'
+  venue: 'IEEE Transactions on Medical Imaging (TMI)'
+  year: 2023
+  type: journal
+  map: [ct, unc, lung]
+  corresponding: true
+
+- title: 'Uncertainty-Guided Lung Nodule Segmentation with Feature-Aware Attention'
+  authors: 'Han Yang, Lu Shen, Mengke Zhang, Qiuli Wang'
+  venue: 'MICCAI 2022'
+  year: 2022
+  type: conference
+  map: [ct, unc, lung]
+  corresponding: true
+
+- title: 'Class-Aware Multi-Window Adversarial Lung Nodule Synthesis Conditioned on Semantic Features'
+  authors: 'Qiuli Wang, Xingpeng Zhang, Wei Chen, Kun Wang, Xiaohong Zhang'
+  venue: 'MICCAI 2020'
+  year: 2020
+  type: conference
+  map: [ct, syn, lung]
+
+- title: 'Unsupervised Stain-Aware Pixel-Adversarial Transfer Learning for Virtual Immunohistochemical Staining'
+  authors: 'Qiuli Wang, Yongxu Liu, Li Ma, Yue Zhang, Xianqi Wang, Yong Lin, S. Kevin Zhou, Wei Chen, Xiaohong Yao'
+  venue: 'Knowledge-Based Systems'
+  year: 2026
+  type: journal
+  map: [wsi, syn, lung, liver]
+
+- title: 'Triple-Phase Sequential Fusion Network with Contrast Enhancement Kinetics for Hepatobiliary-Phase Liver MRI Synthesis'
+  authors: 'Qiuli Wang, Xinhuan Sun, Fengxi Chen, Yongxu Liu, Jie Cheng, Lin Chen, Jiafei Chen, Siwei Miao, Xingpeng Zhang, Yue Zhang, Xiaoming Li, Wei Chen'
+  venue: 'Biomedical Signal Processing and Control (BSPC)'
+  year: 2026
+  type: journal
+  map: [mri, syn, cm, liver]
+  corresponding: true
+- title: 'Prompt Optimization and Multidimensional Quality Assessment for Chinese Large Language Model-Generated Diagnostic Impressions from Liver MRI Findings'
+  authors: 'Qiuli Wang, Xinhuan Sun, Yonglin Chen, Jie Cheng, Yongxu Liu, Xingpeng Zhang, Zhenghua Zhang, Chen Liu, Xiaoming Li, Wei Chen'
+  venue: 'BMC Medical Imaging'
+  year: 2026
+  type: journal
+  map: [report, vlm, liver, lung]
+
+- title: 'A Frequency-Aware Lightweight Network for Robust Nuclei Segmentation and Classification on Challenging Histologies'
+  authors: 'Xingpeng Zhang, Peng Guo, Chao Gao, Wei Li, Yang Yu, Qiuli Wang'
+  venue: 'IEEE ICME 2026'
+  year: 2026
+  type: conference
+  map: [wsi, lw]
+  corresponding: true
+
+- title: '融合显式边界先验与解耦注意力的多模态脑肿瘤分割网络'
+  authors: '张兴鹏, 刘晓鹏, 李伟, 王秋里'
+  venue: '中国图象图形学报'
+  year: 2026
+  type: chinese
+  map: [mri, cm, brain]
+  corresponding: true
+
+- title: 'MMFC: Multi-Modal Fusion Cascade Framework for COVID-19 Disease Course Classification'
+  authors: 'Han Yang, Mengke Zhang, Lu Shen, Qiuli Wang, Wanqiu Cheng, Chen Liu, Minjian Hong'
+  venue: 'IEEE ICIP 2021'
+  year: 2021
+  type: conference
+  map: [ct, cm, lung]
+  corresponding: true
+
+- title: 'MTGAN: Mask and Texture-Driven Generative Adversarial Network for Lung Nodule Segmentation'
+  authors: 'Wei Chen, Qiuli Wang, Kun Wang, Dan Yang, Xiaohong Zhang, Chen Liu, Yucong Li'
+  venue: 'ICPR 2020'
+  year: 2020
+  type: conference
+  map: [ct, syn, lung]
+
+- title: 'Fine Grain Lung Nodule Diagnosis Based on CT Using 3D Convolutional Neural Network'
+  authors: 'Qiuli Wang, Jiajia Zhang, Sheng Huang, Chen Liu, Xiaohong Zhang, Dan Yang'
+  venue: 'PRCV 2019'
+  year: 2019
+  type: conference
+  map: [ct, lung]
+
+# ——— 以下为其他合作 / 早期论文 ———
+
+- title: 'Multi-Party Collaborative Attention Control for Image Customization'
+  authors: 'Han Yang, Chuanguang Yang, Qiuli Wang, Zhulin An, Wei Feng, Libo Huang, Yongjun Xu'
+  venue: 'CVPR 2025'
+  year: 2025
+  type: conference
+  map: [natural, syn, general]
+
+- title: 'Unified Multi-Modal Image Synthesis for Missing Modality Imputation'
+  authors: 'Yue Zhang, Chengtao Peng, Qiuli Wang, Dan Song, Kaiyan Li, S. Kevin Zhou'
+  venue: 'IEEE Transactions on Medical Imaging (TMI)'
+  year: 2024
+  type: journal
+  map: [mri, cm]
+
+- title: 'Dual Windows Are Significant: Learning from Mediastinal Window and Focusing on Lung Window'
+  authors: 'Qiuli Wang, Xin Tan, Lizhuang Ma, Chen Liu'
+  venue: 'PRCV 2022 (LNCS)'
+  year: 2022
+  type: conference
+  map: [ct, cm, lung]
+
+- title: 'DFDM: A Deep Feature Decoupling Module for Lung Nodule Segmentation'
+  authors: 'Wei Chen, Qiuli Wang, Sheng Huang, Xiaohong Zhang, Yucong Li, Chen Liu'
+  venue: 'IEEE ICASSP 2021'
+  year: 2021
+  type: conference
+  map: [ct, cm, lung]
+
+- title: 'A Probabilistic Model for Segmentation of Ambiguous 3D Lung Nodule'
+  authors: 'Xiaojiang Long, Wei Chen, Qiuli Wang, Xiaohong Zhang, Chen Liu, Yucong Li, Jiuquan Zhang'
+  venue: 'IEEE ICASSP 2021'
+  year: 2021
+  type: conference
+  map: [ct, unc, lung]
+
+- title: 'End-to-End Multi-Task Learning for Lung Nodule Segmentation and Diagnosis'
+  authors: 'Wei Chen, Qiuli Wang, Dan Yang, Xiaohong Zhang, Chen Liu, Yucong Li'
+  venue: 'ICPR 2020'
+  year: 2020
+  type: conference
+  map: [ct, lung]
+
+- title: 'CTF-Net: Retinal Vessel Segmentation via Deep Coarse-To-Fine Supervision Network'
+  authors: 'Kun Wang, Xiaohong Zhang, Sheng Huang, Qiuli Wang, Feiyu Chen'
+  venue: 'IEEE ISBI 2020'
+  year: 2020
+  type: conference
+  map: [natural, msf, general]
+
+- title: 'Deep Regression via Multi-Channel Multi-Modal Learning for Pneumonia Screening'
+  authors: 'Qiuli Wang, Dan Yang, Zhihuan Li, Xiaohong Zhang, Chen Liu'
+  venue: 'IEEE Access'
+  year: 2020
+  type: journal
+  map: [ct, lung]
+
+- title: 'Lung Nodule Synthesis Guided by Customized Multi-Confidence Masks'
+  authors: 'Hu Chen, Yongxu Liu, Chen Liu, Qiuli Wang, Rongpin Wang'
+  venue: 'Biomedical Engineering Letters'
+  year: 2025
+  type: journal
+  map: [ct, syn, unc, lung]
+
+- title: 'Edge-Guided Multilevel Feature Fusion Network for Lightweight Camouflaged Object Detection'
+  authors: 'Xingpeng Zhang, Meilin Gao, Guohai Gao, Xin Wang, Qiuli Wang'
+  venue: 'IJCNN 2024'
+  year: 2024
+  type: conference
+  map: [natural, msf, general]
+
+- title: 'Hybrid Attention Multi-Scale Feature Aggregation for Efficient Nuclei Segmentation and Classification in H&E-Stained Images'
+  authors: 'Xingpeng Zhang, Peng Guo, Qiuli Wang, Kaixin Wang, Sijing Wu, Jing Xu, Yang Yu'
+  venue: 'Multimedia Systems'
+  year: 2025
+  type: journal
+  map: [wsi, lw]
+
+- title: 'EffRetMamba: A Light-Weight Mamba for Low-Light Image Enhancement'
+  authors: 'Xingpeng Zhang, Sijing Wu, Qiuli Wang, Kaixin Wang'
+  venue: 'Circuits, Systems and Signal Processing'
+  year: 2025
+  type: journal
+  map: [natural, lw, general]
+
+- title: 'MFI-CD: A Lightweight Siamese Network with Multidimensional Feature Interaction for Change Detection'
+  authors: 'Xingpeng Zhang, Yuru Li, Qiuli Wang, Sijing Wu'
+  venue: 'International Journal of Remote Sensing'
+  year: 2024
+  type: journal
+  map: [natural, msf, general]
+
+- title: 'Residual Inception: A New Module Combining Modified Residual with Inception to Improve Network Performance'
+  authors: 'Qiuli Wang, Sheng Huang, Xiaohong Zhang, Wei Wang, Dan Yang'
+  venue: 'IEEE ICIP 2018'
+  year: 2018
+  type: conference
+  map: [natural, msf, general]
