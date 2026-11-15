@@ -63,6 +63,13 @@
   map: [mri, cm, brain]
   corresponding: true
 
+- title: '面向高效临床部署的轻量化多模态脑肿瘤 MRI 分割模型：MLG-UNet 以 0.81 M 参数实现 86.67% 平均 Dice'
+  authors: '张兴鹏, 李伟, 刘晓鹏, 孙欣欢, 王秋里'
+  venue: '陆军军医大学学报'
+  year: 2026
+  map: [mri, cm, brain]
+  corresponding: true
+
 - title: 'MMFC: Multi-Modal Fusion Cascade Framework for COVID-19 Disease Course Classification'
   authors: 'Han Yang, Mengke Zhang, Lu Shen, Qiuli Wang, Wanqiu Cheng, Chen Liu, Minjian Hong'
   venue: 'IEEE ICIP 2021'
