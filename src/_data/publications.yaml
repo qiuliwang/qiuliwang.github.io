@@ -7,13 +7,13 @@
 
 - title: 'Realistic Lung Nodule Synthesis with Multi-Target Co-Guided Adversarial Mechanism'
   authors: 'Qiuli Wang, Xiaohong Zhang, Wei Zhang, Mingchen Gao, Sheng Huang, Jian Wang, Jiuquan Zhang, Dan Yang, Chen Liu'
-  venue: 'IEEE Transactions on Medical Imaging (TMI)'
+  venue: 'IEEE Transactions on Medical Imaging'
   year: 2021
   map: [ct, syn, lung]
 
 - title: 'Lung Nodule Segmentation and Uncertain Region Prediction with an Uncertainty-Aware Attention Mechanism'
   authors: 'Han Yang, Qiuli Wang, Yue Zhang, Zhulin An, Liu Chen, Xiaohong Zhang, S. Kevin Zhou'
-  venue: 'IEEE Transactions on Medical Imaging (TMI)'
+  venue: 'IEEE Transactions on Medical Imaging'
   year: 2023
   map: [ct, unc, lung]
   corresponding: true
@@ -39,7 +39,7 @@
 
 - title: 'Triple-Phase Sequential Fusion Network with Contrast Enhancement Kinetics for Hepatobiliary-Phase Liver MRI Synthesis'
   authors: 'Qiuli Wang, Xinhuan Sun, Fengxi Chen, Yongxu Liu, Jie Cheng, Lin Chen, Jiafei Chen, Siwei Miao, Xingpeng Zhang, Yue Zhang, Xiaoming Li, Wei Chen'
-  venue: 'Biomedical Signal Processing and Control (BSPC)'
+  venue: 'Biomedical Signal Processing and Control'
   year: 2026
   map: [mri, syn, cm, liver]
   corresponding: true
@@ -99,7 +99,7 @@
 
 - title: 'Unified Multi-Modal Image Synthesis for Missing Modality Imputation'
   authors: 'Yue Zhang, Chengtao Peng, Qiuli Wang, Dan Song, Kaiyan Li, S. Kevin Zhou'
-  venue: 'IEEE Transactions on Medical Imaging (TMI)'
+  venue: 'IEEE Transactions on Medical Imaging'
   year: 2024
   map: [mri, cm]
 
