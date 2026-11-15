@@ -105,7 +105,7 @@
 
 - title: 'Dual Windows Are Significant: Learning from Mediastinal Window and Focusing on Lung Window'
   authors: 'Qiuli Wang, Xin Tan, Lizhuang Ma, Chen Liu'
-  venue: 'PRCV 2022 (LNCS)'
+  venue: 'PRCV 2022'
   year: 2022
   map: [ct, cm, lung]
 
