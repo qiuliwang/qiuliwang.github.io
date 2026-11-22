@@ -23,9 +23,36 @@
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="{{ site.name_zh }} ({{ site.name_en }})">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{{ site.url }}/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="zh_CN">
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:type" content="profile">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}{{ site.avatar }}">
+  <meta name="twitter:card" content="summary">
+  {%- if site.google_verification %}
+  <meta name="google-site-verification" content="{{ site.google_verification }}">
+  {%- endif %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person",
+    "name": "{{ site.name_zh }}",
+    "alternateName": "{{ site.name_en }}",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.url }}{{ site.avatar }}",
+    "jobTitle": "{{ site.role }}",
+    "description": "{{ site.description }}",
+    "worksFor": { "@type": "Organization", "name": "{{ site.affiliation }}" },
+    "address": { "@type": "PostalAddress", "addressLocality": "重庆", "addressCountry": "CN" },
+    "knowsAbout": [{% for i in site.interests %}"{{ i }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+    "sameAs": [{% for l in site.links %}"{{ l.url | safe }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+  }
+  </script>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/style.css?v={{ build }}">
   <script>

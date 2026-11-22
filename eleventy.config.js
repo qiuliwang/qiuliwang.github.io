@@ -48,6 +48,11 @@ export default function (eleventyConfig) {
   // 构建时间戳，给 css / js 加 ?v= 防缓存
   eleventyConfig.addGlobalData("build", () => Date.now());
 
+  // 构建日期（YYYY-MM-DD），给 sitemap 的 lastmod 用
+  eleventyConfig.addGlobalData("builtOn", () =>
+    new Date().toISOString().slice(0, 10)
+  );
+
   eleventyConfig.addWatchTarget("./src/assets/");
 
   return {

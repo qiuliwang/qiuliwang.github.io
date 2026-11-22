@@ -7,6 +7,12 @@ location: 重庆，中国
 email: qiuliwang0102@outlook.com
 avatar: /assets/img/avatar.jpg
 
+# 站点地址：canonical / sitemap / 结构化数据都用它，换自定义域名时只改这一行
+url: https://qiuliwang.github.io
+
+# Google Search Console 的 HTML 标记验证码（留空则不输出该 meta）
+google_verification:
+
 # 研究方向（显示在页头邮箱下方，顿号连接）
 interests:
   - 不确定性建模与多标注学习
