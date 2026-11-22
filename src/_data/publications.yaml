@@ -42,7 +42,6 @@
   venue: 'Biomedical Signal Processing and Control'
   year: 2026
   map: [mri, syn, cm, liver]
-  corresponding: true
 - title: 'Prompt Optimization and Multidimensional Quality Assessment for Chinese Large Language Model-Generated Diagnostic Impressions from Liver MRI Findings'
   authors: 'Qiuli Wang, Xinhuan Sun, Yonglin Chen, Jie Cheng, Yongxu Liu, Xingpeng Zhang, Zhenghua Zhang, Chen Liu, Xiaoming Li, Wei Chen'
   venue: 'BMC Medical Imaging'
