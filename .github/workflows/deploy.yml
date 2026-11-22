@@ -38,3 +38,15 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  notify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      # 部署完成后主动推送 URL 给 Bing / Yandex / Seznam 等支持 IndexNow 的引擎
+      - name: Ping IndexNow
+        continue-on-error: true
+        run: |
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{"host":"qiuliwang.github.io","key":"bb2441f1e90e41e9a2966d874f1705b0","keyLocation":"https://qiuliwang.github.io/bb2441f1e90e41e9a2966d874f1705b0.txt","urlList":["https://qiuliwang.github.io/"]}'
