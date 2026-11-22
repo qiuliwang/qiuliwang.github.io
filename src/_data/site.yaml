@@ -13,6 +13,9 @@ url: https://qiuliwang.github.io
 # Google Search Console 的 HTML 标记验证码（留空则不输出该 meta）
 google_verification:
 
+# Bing Webmaster Tools 的 HTML 标记验证码（msvalidate.01，留空则不输出）
+bing_verification:
+
 # 研究方向（显示在页头邮箱下方，顿号连接）
 interests:
   - 不确定性建模与多标注学习
