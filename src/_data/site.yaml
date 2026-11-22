@@ -14,7 +14,7 @@ url: https://qiuliwang.github.io
 google_verification:
 
 # Bing Webmaster Tools 的 HTML 标记验证码（msvalidate.01，留空则不输出）
-bing_verification:
+bing_verification: '7B40B5296C67B4F05015B154921BE05E'
 
 # 研究方向（显示在页头邮箱下方，顿号连接）
 interests:
