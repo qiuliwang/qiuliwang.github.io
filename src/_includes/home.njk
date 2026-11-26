@@ -48,12 +48,12 @@
     "alternateName": "{{ site.name_en }}",
     "url": "{{ site.url }}/",
     "image": "{{ site.url }}{{ site.avatar }}",
-    "jobTitle": "{{ site.role }}",
     "description": "{{ site.description }}",
-    "worksFor": { "@type": "Organization", "name": "{{ site.affiliation }}" },
     "address": { "@type": "PostalAddress", "addressLocality": "重庆", "addressCountry": "CN" },
     "knowsAbout": [{% for i in site.interests %}"{{ i }}"{% if not loop.last %}, {% endif %}{% endfor %}],
-    "sameAs": [{% for l in site.links %}"{{ l.url | safe }}"{% if not loop.last %}, {% endif %}{% endfor %}]
+    "sameAs": [{% for l in site.links %}"{{ l.url | safe }}"{% if not loop.last %}, {% endif %}{% endfor %}]{% if site.role %},
+    "jobTitle": "{{ site.role }}"{% endif %}{% if site.affiliation %},
+    "worksFor": { "@type": "Organization", "name": "{{ site.affiliation }}" }{% endif %}
   }
   </script>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -73,7 +73,9 @@
     <img class="avatar" src="{{ site.avatar }}" alt="头像">
     <div class="hero-text">
       <h1>{{ site.name_zh }}<span class="en">{{ site.name_en }}</span></h1>
+      {%- if site.role or site.affiliation %}
       <p class="tagline">{{ site.role }}{% if site.affiliation %} · {{ site.affiliation }}{% endif %}</p>
+      {%- endif %}
       <p class="meta">{{ site.location }}{% if site.email %} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}</p>
       {%- if site.interests and site.interests.length %}
       <p class="research"><span class="label">研究方向：</span>{% for i in site.interests %}<strong>{{ i }}</strong>{% if not loop.last %}、{% endif %}{% endfor %}</p>

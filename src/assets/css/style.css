@@ -135,6 +135,11 @@ h1 .en {
   color: var(--muted);
 }
 
+/* 页头没有职位行（role / affiliation 为空）时，meta 直接跟在标题后，补一点间距 */
+h1 + .meta {
+  margin-top: 14px;
+}
+
 .research {
   margin: 10px 0 0;
   font-size: 14.6px;
